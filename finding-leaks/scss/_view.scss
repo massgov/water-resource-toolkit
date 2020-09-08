@@ -1,0 +1,544 @@
+body {
+    background: #222;
+}
+
+.wrap {
+    background: #fff;
+    margin: 0 auto;
+    max-width: 1370px;
+    position: relative;
+    @include min-screens(992px) {
+        min-height: 890px;
+    }
+    .stamp {
+        background: rgba($cyan, 0.4);
+        padding: 20px;
+        text-align: center;
+        @include min-screens(768px) {
+            background: none;
+            padding: 0;
+            position: absolute;
+            right: 0;
+            text-align: left;
+            top: 60px;
+            width: 36%;
+            z-index: 1;
+        }
+        @include min-screens {
+            top: 90px;
+            width: 460px;
+        }
+        .seal {
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            width: 200px;
+            @include min-screens(768px) {
+                width: 85%;
+                display: block;
+            }
+            @include min-screens {
+                width: 425px;
+            }
+        }
+        .wave {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 40%;
+            @include min-screens(768px) {
+                top: 80px;
+                width: 65%;
+            }
+            @include min-screens {
+                top: 110px;
+                width: 77%;
+            }
+        }
+    }
+}
+
+.gap {
+    padding: 20px;
+    @include min-screens(768px) {
+        padding: 5vw;
+    }
+    @include min-screens {
+        padding: 70px;
+    }
+    &.bottom {
+        padding-bottom: 30px;
+        padding-top: 30px;
+    }
+}
+
+.top {
+    @include min-screens(768px) {
+        padding-bottom: 4vw;
+        padding-top: 10vw;
+    }
+    @include min-screens {
+        padding-bottom: 40px;
+        padding-top: 130px;
+    }
+    h2 {
+        color: $black;
+        font: 32px $copy;
+        margin: 0;
+        position: relative;
+        text-align: center;
+        text-transform: uppercase;
+        z-index: 1;
+        @include min-screens(430px) {
+            font-size: 42px;
+        }
+        @include min-screens(768px) {
+            text-align: left;
+            font-size: 7.5vw;
+        }
+        @include min-screens {
+            font-size: 104px;
+        }
+        strong {
+            font-family: $copybold;
+        }
+        @include max-screens {
+            br {
+                display: none;
+            }
+        }
+    }
+    &.cyan {
+        background: rgba($cyan, 0.4);
+    }
+    &.orange {
+        background: $orange;
+    }
+    &.green {
+        background: $green;
+    }
+    &.blue {
+        background: $blue;
+    }
+    &.yellow {
+        background: $yellow;
+        h2 {
+            color: $blue;
+        }
+    }
+    &.lightblue {
+        background: $lightblue;
+        h2 {
+            color: $blue;
+        }
+    }
+}
+
+.bottom {
+    background: $white;
+    position: relative;
+    text-align: center;
+    @include min-screens(768px) {
+        padding-right: 40vw;
+        text-align: left;
+    }
+    @include min-screens {
+        padding-right: 650px;
+    }
+    h3 {
+        font: 18px $copy;
+        margin: 0;
+        @include min-screens(430px) {
+            font-size: 24px;
+        }
+        @include min-screens(768px) {
+            font-size: 3.4vw;
+        }
+        @include min-screens {
+            font-size: 44px;
+        }
+    }
+    .note {
+        font: 12px $copy;
+        margin: 20px 0 0 0;
+        color: $copycolor;
+        @include min-screens(768px) {
+            font-size: 2vw;
+            margin: 7vw 0 0 0;
+        }
+        @include min-screens {
+            margin: 74px 0 0 0;
+            font-size: 24px;
+        }
+        a {
+            color: $copycolor;
+            &:hover {
+                color: $blue;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.area-cta {
+    border: 2px solid #00699b;
+    color: #00699b;
+    display: inline-flex;
+    flex-direction: column;
+    font: 16px "NeutraTextBook", Sans;
+    margin: 30px 0 0;
+    padding: 10px 20px;
+    text-align: left;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    vertical-align: top;
+    @include min-screens(768px) {
+        border-right: 0 none;
+        border-width: 3px;
+        font-size: 20px;
+        margin: 0;
+        padding: 15px 30px;
+        position: absolute;
+        right: 0;
+        top: 150px
+    }
+    @include min-screens {
+        font-size: 28px;
+        padding: 15px 35px;
+        top: 230px;
+    }
+    .go {
+        font: 34px/1 "NeutraTextBold", Sans;
+        padding-top: 5px;
+        @include min-screens(768px) {
+            font-size: 40px;
+        }
+        @include min-screens {
+            font-size: 62px;
+        }
+    }
+    &:hover {
+        background: $blue;
+        color: $white;
+        text-decoration: none;
+    }
+}
+
+.area {
+    position: relative;
+    @include min-screens(768px) {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        position: static;
+    }
+    .img {
+        padding: 20px 0;
+        @include min-screens(768px) {
+            max-width: 992px;
+            padding: 60px 0;
+        }
+        img {
+            vertical-align: top;
+        }
+    }
+    .area-link {
+        @include min-screens(768px) {
+            height: 100%;
+            position: absolute;
+            left: 0;
+            padding: 0;
+            top: 0;
+            width: 100%;
+        }
+    }
+    .cta {
+        color: #fff;
+        display: block;
+        font: 20px/1 "NeutraTextBold", Sans;
+        margin-bottom: 15px;
+        padding: 15px;
+        text-align: center;
+        text-decoration: none;
+        width: 100%;
+        @include min-screens(768px) {
+            margin: 0;
+            font-size: 28px;
+            min-width: 320px;
+            padding: 20px 10px;
+            position: absolute;
+            width: auto;
+            &.top {
+                top: 40px;
+            }
+            &.left {
+                left: 40px;
+            }
+            &.right {
+                right: 40px;
+            }
+            &.bottom {
+                bottom: 40px;
+            }
+        }
+        @include min-screens {
+            font-size: 36px;
+            min-width: 450px;
+            padding: 30px 15px;
+        }
+        &.blue {
+            background: $blue;
+        }
+        &.orange {
+            background: $orange;
+        }
+        &.cyan {
+            background: $cyan;
+        }
+        &.green {
+            background: $green;
+        }
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.leak-area {
+    .head {
+        @include min-screens(992px) {
+            margin-top: 50px;
+        }
+        @include min-screens {
+            margin-top: 80px;
+        }
+        .head-text {
+            padding: 20px 0;
+            text-align: center;
+            @include min-screens(992px) {
+                padding: 20px;
+                position: relative;
+                text-align: left;
+                z-index: 10;
+                height: 100px;
+            }
+            h2 {
+                color: #fff;
+                font: 28px/1 "NeutraTextBold", Sans;
+                text-transform: uppercase;
+                margin: 0;
+                @include min-screens(430px) {
+                    font-size: 34px;
+                }
+                @include min-screens(768px) {
+                    font-size: 56px;
+                }
+                @include min-screens(992px) {
+                    font-size: 62px;
+                }
+                small {
+                    font: 14px/1 "NeutraTextBook", Sans;
+                    @include min-screens(768px) {
+                        font-size: 20px;
+                    }
+                    @include min-screens(992px) {
+                        bottom: 24px;
+                        font-size: 26px;
+                        left: 0;
+                        position: absolute;
+                        transform: translateX(-85%);
+                        white-space: nowrap;
+                    }
+                }
+            }
+        }
+    }
+    .bgcolor {
+        margin-top: -30px;
+        padding: 20px;
+        @include min-screens(992px) {
+            margin-top: -150px;
+            padding-top: 120px!important;
+        }
+        @include min-screens {
+            margin-top: -180px;
+            padding-top: 150px!important;
+        }
+    }
+    .frame {
+        position: relative;
+        padding-bottom: 15px;
+        .leak-area {
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+        .leak-point {
+            display: none;
+        }
+    }
+    .outer {
+        padding: 0 0 20px;
+        @include min-screens(768px) {
+            padding: 0 30px 30px;
+        }
+        @include min-screens(992px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            padding: 30px 20px;
+        }
+        .copy {
+            margin-bottom: 50px;
+            @include min-screens(992px) {
+                margin-bottom: 20px;
+            }
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                li {
+                    color: #000;
+                    font: 16px "NeutraTextBook", Sans;
+                    margin-bottom: 20px;
+                    position: relative;
+                    padding: 0 0 0 15px;
+                    @include min-screens(768px) {
+                        font-size: 26px;
+                        margin-bottom: 30px;
+                        padding: 0 0 0 35px;
+                    }
+                    strong {
+                        text-transform: uppercase;
+                    }
+                    .icon {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 10px;
+                        @include min-screens(768px) {
+                            width: 20px;
+                        }
+                    }
+                }
+            }
+            strong {
+                font-family: $copybold;
+            }
+            a {
+                color: #2e3192;
+            }
+        }
+        .cta-row {
+            display: flex;
+            justify-content: center;
+            @include min-screens(992px) {
+                justify-content: flex-end;
+            }
+            .cta {
+                border-radius: 10px;
+                color: #fff;
+                font: 14px "NeutraTextBold", Sans;
+                margin: 0 5px;
+                padding: 10px 15px;
+                text-align: center;
+                text-decoration: none;
+                text-transform: uppercase;
+                min-width: 120px;
+                @include min-screens(768px) {
+                    border-radius: 15px;
+                    font-size: 18px;
+                    margin: 0 10px;
+                    min-width: 175px;
+                    padding: 15px 20px;
+                }
+                @include min-screens(992px) {
+                    margin: 0 0 0 25px;
+                }
+            }
+        }
+    }
+    &.blue {
+        .head {
+            background: $blue;
+        }
+        @include min-screens(992px) {
+            .bgcolor {
+                background: rgba($blue, 0.2);
+            }
+        }
+        .copy {
+            strong {
+                color: $blue;
+            }
+        }
+        .cta-row {
+            .cta {
+                background: $blue;
+            }
+        }
+    }
+    &.orange {
+        .head {
+            background: $orange;
+        }
+        @include min-screens(992px) {
+            .bgcolor {
+                background: rgba($orange, 0.2);
+            }
+        }
+        .copy {
+            strong {
+                color: $orange;
+            }
+        }
+        .cta-row {
+            .cta {
+                background: $orange;
+            }
+        }
+    }
+    &.cyan {
+        .head {
+            background: $cyan;
+        }
+        @include min-screens(992px) {
+            .bgcolor {
+                background: rgba($cyan, 0.2);
+            }
+        }
+        .copy {
+            strong {
+                color: $cyan;
+            }
+        }
+        .cta-row {
+            .cta {
+                background: $cyan;
+            }
+        }
+    }
+    &.green {
+        .head {
+            background: $green;
+        }
+        @include min-screens(992px) {
+            .bgcolor {
+                background: rgba($green, 0.2);
+            }
+        }
+        .copy {
+            strong {
+                color: $green;
+            }
+        }
+        .cta-row {
+            .cta {
+                background: $green;
+            }
+        }
+    }
+}

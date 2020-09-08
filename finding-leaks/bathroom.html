@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Finding Leaks</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/css.css">
+</head>
+
+<body>
+    <main class="wrap">
+        <div class="container-fluid">
+            <div class="row leak-area blue">
+                <div class="col-12">
+                    <div class="row head">
+                        <div class="col-12 col-lg-6 col-xl-7"></div>
+                        <div class="col-12 col-lg-6 col-xl-5">
+                            <div class="head-text">
+                                <h2><small>In The</small> Bathroom</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 col-xl-7 p-lg-5 bgcolor">
+                    <div class="frame">
+                        <div class="img"><img src="images/bathroom.svg" class="w-100" alt=""></div>
+                        <div class="leak-area" id="leakarea">
+                            <div class="leak-point" data-leak="toilet"><img src="images/bathroom-toilet.svg" alt="" class="w-100"></div>
+                            <div class="leak-point" data-leak="faucet"><img src="images/bathroom-faucet.svg" alt="" class="w-100"></div>
+                            <div class="leak-point" data-leak="shower"><img src="images/bathroom-shower.svg" alt="" class="w-100"></div>
+                            <div class="leak-point" data-leak="tub"><img src="images/bathroom-tub.svg" alt="" class="w-100"></div>
+                            <div class="leak-point" data-leak="sink"><img src="images/bathroom-sink.svg" alt="" class="w-100"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 col-xl-5">
+                    <div class="outer">
+                        <div class="copy">
+                            <ul id="leakpointer">
+                                <li class="leak-here" data-leak="toilet"><span class="icon"><img src="images/blue-drop.svg" alt="" class="w-100"></span><strong>Toilets:</strong> Listen for running water.</li>
+                                <li class="leak-here" data-leak="faucet"><span class="icon"><img src="images/blue-drop.svg" alt="" class="w-100"></span><strong>Faucets:</strong> Look for drips.</li>
+                                <li class="leak-here" data-leak="shower"><span class="icon"><img src="images/blue-drop.svg" alt="" class="w-100"></span><strong>Showerheads:</strong> Look for drips when the shower control is turned off. When the shower is running, look for stray sprays. Both
+                                    can be stopped with plumber’s tape.</li>
+                                <li class="leak-here" data-leak="tub"><span class="icon"><img src="images/blue-drop.svg" alt="" class="w-100"></span><strong>In the tub:</strong> Look for drips when the control is turned off.</li>
+                                <li class="leak-here" data-leak="sink"><span class="icon"><img src="images/blue-drop.svg" alt="" class="w-100"></span><strong>Under the sink:</strong> Check for pooling water under pipes and rust around joints and edges. </li>
+                            </ul>
+                        </div>
+                        <div class="cta-row">
+                            <a href="https://www.epa.gov/watersense/fix-leak-week" target="_blank" class="cta">Fix that leak</a>
+                            <a href="area.html" class="cta">Got it!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
