@@ -1,0 +1,454 @@
+body {
+    background: #222;
+}
+
+.wrap {
+    margin: 0 auto;
+    max-width: 1370px;
+    position: relative;
+    .seal {
+        position: absolute;
+        right: 20px;
+        top: 46.5%;
+        transform: translateY(-50%);
+        z-index: 5;
+        width: 24%;
+        @include min-screens(768px) {
+            width: 32%;
+        }
+        @include min-screens {
+            width: 444px;
+        }
+    }
+    .patternbg {
+        background-image: url('../images/pattern.png');
+        background-position: 0 100%;
+        background-size: 100% auto;
+        bottom: 34%;
+        height: calc(100% - 34%);
+        position: absolute;
+        right: 0;
+        width: 18%;
+        @include min-screens(768px) {
+            bottom: 18.5%;
+            height: calc(100% - 18.5%);
+            width: 24%;
+        }
+        @include min-screens {
+            width: 344px;
+        }
+    }
+    .wave {
+        @extend .seal;
+        right: 0;
+        top: 33%;
+    }
+}
+
+.gap {
+    padding: 20px;
+    @include min-screens(768px) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    @include min-screens(768px) {
+        padding: 5vw;
+    }
+    @include min-screens {
+        padding: 70px;
+    }
+}
+
+.top {
+    position: relative;
+    z-index: 1;
+    @include min-screens(768px) {
+        min-height: 250px;
+    }
+    @include min-screens {
+        align-items: center;
+        display: flex;
+        .gap {
+            padding: 30px 70px;
+        }
+    }
+    h2 {
+        color: $white;
+        font: 24px $copy;
+        margin: 0;
+        position: relative;
+        text-transform: uppercase;
+        z-index: 1;
+        @include min-screens(768px) {
+            font-size: 5vw;
+        }
+        @include min-screens {
+            font-size: 70px;
+        }
+        &.welcome {
+            font-size: 32px;
+            @include min-screens(768px) {
+                font-size: 7.5vw;
+            }
+            @include min-screens {
+                font-size: 104px;
+            }
+        }
+        &.ans {
+            text-transform: initial;
+        }
+        &.ans-large {
+            font-size: 20px;
+            @include min-screens(768px) {
+                font-size: 4vw;
+            }
+            @include min-screens {
+                font-size: 58px;
+            }
+        }
+        strong {
+            font-family: $copybold;
+        }
+        @include max-screens {
+            br {
+                display: none;
+            }
+        }
+    }
+    .img-hold {
+        position: absolute;
+        right: 20px;
+        bottom: -10px;
+        width: 33%;
+        @include min-screens(768px) {
+            bottom: -4vw;
+            right: 5vw;
+            width: 35vw;
+        }
+        @include min-screens {
+            bottom: -40px;
+            right: 70px;
+            width: 480px;
+        }
+        &.ptop {
+            top: 20px;
+            bottom: initial;
+            @include min-screens(768px) {
+                top: 5vw;
+            }
+            @include min-screens {
+                top: 70px;
+            }
+        }
+        &.pbot {
+            bottom: 0;
+        }
+    }
+    &.cyan {
+        background: $cyan;
+    }
+    &.orange {
+        background: $orange;
+    }
+    &.green {
+        background: $green;
+    }
+    &.blue {
+        background: $blue;
+    }
+    &.yellow {
+        background: $yellow;
+        h2 {
+            color: $blue;
+        }
+    }
+    &.lightblue {
+        background: $lightblue;
+        h2 {
+            color: $blue;
+        }
+    }
+}
+
+.bottom {
+    background: $white;
+    position: relative;
+    @include min-screens {
+        .gap {
+            // align-items: flex-start;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+    // @include min-screens(768px) {
+    //     padding-top: 6.5vw;
+    // }
+    // @include min-screens {
+    //     padding-top: 90px;
+    // }
+    h3 {
+        font: 18px $copy;
+        margin: 0;
+        @include min-screens(768px) {
+            font-size: 3.4vw;
+        }
+        @include min-screens {
+            font-size: 44px;
+        }
+    }
+    .cta {
+        align-items: center;
+        border: 2px solid $blue;
+        display: inline-flex;
+        color: $blue;
+        font: 18px/1 $copybold;
+        justify-content: center;
+        margin: 20px 0 0 0;
+        padding: 10px 30px;
+        text-decoration: none;
+        vertical-align: top;
+        @include min-screens(768px) {
+            font-size: 5vw;
+            margin: 5vw 0 0 0;
+            padding: 1vw 0;
+            width: 37vw;
+        }
+        @include min-screens {
+            border-width: 4px;
+            font-size: 62px;
+            height: 100px;
+            margin-top: 60px;
+            padding: 0;
+            transition: all 0.2s ease-in-out;
+            width: 450px;
+        }
+        &:hover {
+            background: $blue;
+            color: $white;
+        }
+        &.again {
+            font: 18px $copy;
+            margin: 0 0 50px;
+            @include min-screens(768px) {
+                font-size: 3vw;
+                margin: 0 0 50px;
+                padding: 2vw 5vw;
+                width: auto;
+            }
+            @include min-screens {
+                padding: 20px 50px;
+                font-size: 42px;
+            }
+        }
+    }
+    .note {
+        font: 12px $copy;
+        margin: 20px 0 0 0;
+        color: $copycolor;
+        @include min-screens(768px) {
+            font-size: 2vw;
+            margin: 7vw 0 0 0;
+        }
+        @include min-screens {
+            margin: 85px 0 0 0;
+            font-size: 24px;
+        }
+        a {
+            color: $copycolor;
+            &:hover {
+                color: $blue;
+                text-decoration: none;
+            }
+        }
+    }
+    .note-result {
+        @extend .note;
+        margin-top: 0;
+        @include min-screens {
+            font-size: 28px;
+        }
+    }
+    .box {
+        height: 100%;
+        a {
+            border: 2px solid $blue;
+            display: block;
+            color: $blue;
+            font: 16px $copy;
+            height: 100%;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.1s ease-in-out;
+            @include min-screens(768px) {
+                font-size: 2.8vw;
+                padding: 1.5vw 2vw;
+            }
+            @include min-screens {
+                border-width: 4px;
+                font-size: 40px;
+                padding: 20px 25px;
+            }
+            // &:hover {
+            //     background: $blue;
+            //     color: $white;
+            // }
+        }
+    }
+    .selected {
+        .box {
+            a {
+                border-color: $gray;
+                color: $gray;
+                cursor: default;
+                &:hover {
+                    background: $white;
+                    border-color: $gray;
+                    color: $gray;
+                }
+            }
+            &.ans {
+                a {
+                    background: $blue;
+                    border-color: $blue;
+                    color: $white;
+                    font-family: $copybold;
+                }
+            }
+        }
+    }
+    .meta {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        @include min-screens(768px) {
+            margin: 0 0 -2vw;
+        }
+        @include min-screens {
+            margin: 20px 0 -20px;
+        }
+        .info {
+            align-items: center;
+            border: 2px solid #58595b;
+            border-radius: 50%;
+            color: #58595b;
+            cursor: pointer;
+            display: flex;
+            font: 18px $copy;
+            height: 36px;
+            justify-content: center;
+            width: 36px;
+            @include min-screens(768px) {
+                font-size: 3.5vw;
+                height: 5vw;
+                width: 5vw;
+            }
+            @include min-screens {
+                font-size: 50px;
+                height: 75px;
+                width: 75px;
+            }
+            &.hidden {
+                opacity: 0;
+                user-select: none;
+                visibility: hidden;
+            }
+        }
+        .next {
+            color: $blue;
+            font: 14px $copy;
+            @include min-screens(768px) {
+                font-size: 3vw;
+            }
+            @include min-screens {
+                font-size: 44px;
+            }
+            a {
+                color: inherit;
+                font: inherit;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+            .arrow {
+                margin: 0 0 0 10px;
+            }
+        }
+    }
+    @include min-screens {
+        &.result {
+            align-items: flex-start;
+            .gap {
+                display: block;
+            }
+        }
+    }
+    [class*="col-"] {
+        margin-bottom: 20px;
+        @include min-screens(768px) {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.frame {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    @include min-screens(768px) {
+        display: block;
+    }
+    img {
+        width: 100%;
+    }
+    .size {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@keyframes blinkred {
+    0% {
+        border-color: #00699b;
+        color: #00699b;
+    }
+    50% {
+        border-color: #b30408;
+        color: #b30408;
+    }
+    100% {
+        border-color: #00699b;
+        color: #00699b;
+    }
+}
+
+.wrong {
+    animation: blinkred 1s infinite;
+    background-clip: padding-box;
+}
+
+@keyframes blinkgreen {
+    0% {
+        border-color: #00699b;
+        color: #00699b;
+    }
+    50% {
+        border-color: $green;
+        color: $green;
+    }
+    100% {
+        border-color: #00699b;
+        color: #00699b;
+    }
+}
+
+.hint {
+    animation: blinkgreen 1s infinite;
+    background-clip: padding-box;
+}
