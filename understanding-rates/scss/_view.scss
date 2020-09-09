@@ -1,0 +1,585 @@
+body {
+    background: #222;
+}
+
+.wrap {
+    background: #e0e0e0;
+    margin: 0 auto;
+    max-width: 1370px;
+    position: relative;
+    .seal {
+        width: 280px;
+        position: absolute;
+        right: 20px;
+        top: 140px;
+        @include min-screens(768px) {
+            right: 5vw;
+            top: 5vw;
+            width: 47%;
+        }
+        @include min-screens {
+            right: 70px;
+            top: 70px;
+            width: 640px;
+        }
+    }
+}
+
+.yellow {
+    background-color: $yellow;
+}
+
+.blue {
+    background-color: $blue;
+}
+
+.gap {
+    padding: 20px;
+    @include min-screens(768px) {
+        padding: 5vw;
+    }
+    @include min-screens {
+        padding: 70px;
+    }
+}
+
+h2 {
+    &.welcome {
+        color: $blue;
+        font: 28px $copybold;
+        margin: 0;
+        padding: 20px;
+        text-transform: uppercase;
+        @include min-screens(768px) {
+            font-size: 4.5vw;
+            padding: 5vw;
+        }
+        @include min-screens {
+            font-size: 60px;
+            padding: 70px;
+        }
+    }
+}
+
+.wave {
+    padding: 250px 0 20px 0;
+    position: relative;
+    width: 100%;
+    @include min-screens(768px) {
+        padding-top: 0;
+        padding-bottom: 5vw;
+        width: 40%;
+    }
+    @include min-screens {
+        padding-bottom: 76.67px;
+        width: 500px;
+    }
+    .cta {
+        bottom: 65px;
+        left: 50%;
+        position: absolute;
+        transform: translateX(-50%);
+        @include min-screens(768px) {
+            bottom: 8vw;
+            font-size: 3vw;
+            left: 5vw;
+            transform: none;
+        }
+        @include min-screens {
+            font-size: 40px;
+            bottom: 80px;
+            left: 60px;
+        }
+    }
+}
+
+.cta {
+    align-items: center;
+    background: $blue;
+    border-radius: 40px;
+    box-shadow: 5px 5px #004059;
+    color: $white;
+    display: inline-flex;
+    font: 28px/1 $copybold;
+    padding: 10px 30px;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: top;
+    @include min-screens(768px) {
+        padding: 15px 50px;
+        font-size: 2.8vw;
+    }
+    @include min-screens {
+        font-size: 40px;
+    }
+    .arrow {
+        width: 0;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-left: 15px solid $white;
+        border-bottom: 10px solid transparent;
+        display: inline-block;
+        margin: 0 0 0 10px;
+    }
+    &:hover {
+        background: #004059;
+        box-shadow: 5px 5px $blue;
+        color: $white;
+        text-decoration: none;
+    }
+}
+
+.head {
+    padding: 20px;
+    @include min-screens(768px) {
+        padding: 3vw;
+    }
+    @include min-screens {
+        padding: 40px 40px 20px;
+    }
+    h2 {
+        margin: 0;
+        color: $blue;
+        font: 26px "NeutraTextBold", Sans;
+        text-transform: uppercase;
+        @include min-screens(430px) {
+            font-size: 32px;
+        }
+        @include min-screens(992px) {
+            font-size: 46px;
+        }
+        @include min-screens {
+            font-size: 56px;
+        }
+        @include max-screens {
+            br {
+                display: none;
+            }
+        }
+        @include min-screens {
+            &.bill {
+                font-size: 52px;
+            }
+        }
+    }
+}
+
+.type {
+    padding: 20px;
+    @include min-screens(768px) {
+        align-items: center;
+        display: flex;
+        padding-bottom: 30px;
+    }
+    @include min-screens {
+        padding: 40px 0 40px 40px;
+    }
+    .link {
+        @include min-screens(768px) {
+            width: 58%;
+        }
+        .call {
+            background: $yellow;
+            display: flex;
+            margin-bottom: 20px;
+            @include min-screens(992px) {
+                margin-bottom: 40px;
+            }
+        }
+        .num {
+            background: #EA9554;
+            color: $white;
+            font: 60px "NeutraTextBold", Sans;
+            text-align: center;
+            width: 90px;
+            flex: 0 0 90px;
+            @include min-screens(768px) {
+                font-size: 80px;
+            }
+            @include min-screens {
+                font-size: 110px;
+                flex: 0 0 120px;
+                width: 120px;
+            }
+        }
+        h3 {
+            align-self: center;
+            color: #000;
+            flex-grow: 1;
+            font: 20px "NeutraTextBook", Sans;
+            margin: 0;
+            padding: 15px 20px;
+            @include min-screens(768px) {
+                font-size: 24px;
+            }
+            @include min-screens(992px) {
+                font-size: 34px;
+                padding: 20px 25px;
+            }
+            @include max-screens(991px) {
+                br {
+                    display: none;
+                }
+            }
+        }
+        .see-cta {
+            text-align: center;
+            .cta {
+                @include max-screens {
+                    padding: 10px 25px;
+                }
+            }
+        }
+    }
+    .know {
+        padding: 40px 0 0;
+        @include min-screens(768px) {
+            align-items: center;
+            display: flex;
+            flex-grow: 1;
+            justify-content: center;
+            padding: 0;
+        }
+        .img {
+            cursor: pointer;
+            @include min-screens(768px) {
+                width: 200px;
+            }
+            @include min-screens(992px) {
+                width: 354px;
+            }
+        }
+    }
+}
+
+.meta {
+    padding: 20px;
+    text-align: center;
+    @include min-screens(768px) {
+        padding: 30px 20px;
+    }
+    p {
+        margin: 0;
+        color: #fff;
+        color: $white;
+        font: 18px "NeutraTextBook", Sans;
+        @include min-screens(768px) {
+            font-size: 28px;
+        }
+    }
+}
+
+.duk-pop {
+    align-items: center;
+    background: rgba($white, 0.6);
+    display: none;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    .content {
+        background: #EA9554;
+        position: relative;
+        width: 85%;
+        @include min-screens(768px) {
+            display: flex;
+            align-items: center;
+        }
+        .close-pop {
+            color: $blue;
+            cursor: pointer;
+            font: 18px/1 "NeutraTextBold", Sans;
+            position: absolute;
+            right: 20px;
+            text-transform: uppercase;
+            top: 10px;
+            @include min-screens {
+                font-size: 30px;
+            }
+        }
+        .img {
+            background: #f6c75f;
+            padding: 40px 20px 20px;
+            @include min-screens(768px) {
+                flex: 0 0 40%;
+                padding: 40px;
+                width: 40%;
+            }
+        }
+        .copy {
+            padding: 20px;
+            @include min-screens(768px) {
+                padding: 30px;
+            }
+            @include min-screens {
+                flex: 0 0 60%;
+                padding: 40px;
+                width: 60%;
+            }
+            h3 {
+                color: #006899;
+                font: 26px/1 "NeutraTextBold", Sans;
+                margin: 0;
+                @include min-screens(768px) {
+                    font-size: 34px;
+                }
+                @include min-screens {
+                    font-size: 52px;
+                }
+            }
+            p {
+                color: #006899;
+                font: 20px "NeutraTextBook", Sans;
+                margin: 15px 0 0 0;
+                @include min-screens(768px) {
+                    font-size: 28px;
+                }
+                @include min-screens {
+                    font-size: 44px;
+                    margin: 25px 0 0 0;
+                }
+            }
+        }
+    }
+}
+
+.tab-rate {
+    @include min-screens(768px) {
+        display: flex;
+    }
+    .col-rate {
+        padding: 20px;
+        @include min-screens(768px) {
+            width: 50%;
+        }
+        @include min-screens(992px) {
+            padding: 30px 0 20px 30px;
+        }
+        &.left {
+            text-align: center;
+            @include min-screens(768px) {
+                align-self: center;
+            }
+            &.other {
+                padding-top: 0;
+                padding-left: 0;
+                padding-right: 0;
+                align-self: initial;
+            }
+        }
+        &.right {
+            background: #fff;
+            @include min-screens(768px) {
+                padding-right: 0;
+            }
+        }
+    }
+    .img {
+        margin: 30px 0;
+        @include min-screens(768px) {
+            width: 340px;
+            display: inline-block;
+            margin: 50px 0;
+            vertical-align: top;
+        }
+    }
+    .text {
+        margin: 0 0 20px;
+        @include min-screens(768px) {
+            margin: 0 0 40px;
+        }
+        h4 {
+            color: $blue;
+            font: 24px "NeutraTextBold", Sans;
+            text-transform: uppercase;
+            margin: 0;
+            @include min-screens(768px) {
+                font-size: 32px;
+            }
+        }
+        p {
+            color: #000;
+            font: 24px "NeutraTextBook", Sans;
+            @include min-screens(768px) {
+                font-size: 32px;
+            }
+        }
+    }
+    .cta-view {
+        color: #fff;
+        font: 20px/1 "NeutraTextBold", Sans;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 10px 20px;
+        background: #EA9554;
+        display: inline-block;
+        vertical-align: top;
+        width: 100%;
+        @include min-screens(768px) {
+            font-size: 30px;
+            width: auto;
+        }
+        @include min-screens(992px) {
+            font-size: 40px;
+        }
+    }
+    .call-tab {
+        margin-bottom: 10px;
+        a {
+            background: #006899;
+            color: #fff;
+            display: block;
+            font: 20px/1 "NeutraTextBold", Sans;
+            padding: 25px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            @include min-screens(768px) {
+                font-size: 28px;
+                padding: 20px;
+            }
+            @include min-screens(1025px) {
+                padding: 40px 25px;
+                font-size: 40px;
+            }
+        }
+        &.active {
+            a {
+                background: #EA9554;
+            }
+        }
+    }
+    .blue-head {
+        background: #006899;
+        padding: 20px;
+        @include min-screens(1025px) {
+            padding: 30px;
+        }
+        h4 {
+            color: #fff;
+            font: 24px "NeutraTextBook", Sans;
+            margin: 0;
+            @include min-screens(992px) {
+                font-size: 36px;
+            }
+        }
+    }
+    .bar-copy {
+        padding: 20px 20px 0;
+        text-align: left;
+        @include min-screens(992px) {
+            padding: 30px 30px 0;
+        }
+        @include min-screens {
+            padding: 40px 40px 0;
+        }
+        .img {
+            float: left;
+            width: 45px;
+            margin: 0 20px 10px 0;
+            @include min-screens(768px) {
+                width: 90px;
+                margin: 0 30px 0 0;
+            }
+        }
+        .text {
+            margin: 0;
+            @include min-screens(992px) {
+                padding: 0 0 0 120px;
+            }
+            p {
+                font-size: 18px;
+                @include min-screens(768px) {
+                    font-size: 26px;
+                }
+                margin: 0;
+            }
+            strong {
+                color: $blue;
+                font-family: $copybold;
+                text-transform: uppercase;
+            }
+        }
+    }
+    .note {
+        color: #000;
+        font: italic 16px "NeutraTextBook", Sans;
+        margin: 20px 0 0 0;
+        padding-right: 10px;
+        @include min-screens {
+            font-size: 24px;
+            margin: 25px 0 0 0;
+        }
+    }
+    @include max-screens(1025px) {
+        br {
+            display: none;
+        }
+    }
+}
+
+.bill-view {
+    padding: 60px 20px 20px;
+    @include min-screens(768px) {
+        padding: 100px 20px 30px 20px;
+    }
+    @include min-screens(1025px) {
+        padding: 40px 15.37% 40px 40px;
+    }
+    position: relative;
+    h2 {
+        color: #006899;
+        font: 20px "NeutraTextBold", Sans;
+        left: 20px;
+        position: absolute;
+        margin: 0;
+        text-transform: uppercase;
+        top: 20px;
+        @include min-screens(768px) {
+            font-size: 36px;
+        }
+        @include min-screens {
+            font-size: 46px;
+            left: 40px;
+            top: 40px;
+        }
+    }
+    .back {
+        color: #006899;
+        font: 12px/1 "NeutraTextBold", Sans;
+        position: absolute;
+        right: 10px;
+        text-decoration: none;
+        text-transform: uppercase;
+        top: 10px;
+        @include min-screens(768px) {
+            font-size: 20px;
+            right: 20px;
+            top: 20px;
+        }
+        @include min-screens {
+            font-size: 30px;
+            right: 40px;
+            top: 40px;
+        }
+    }
+    .img {
+        position: relative;
+        z-index: 1;
+    }
+    &:before {
+        position: absolute;
+        right: 0;
+        top: 0;
+        content: '';
+        background: #f6c75f;
+        width: 40%;
+        height: 100%;
+    }
+    @include max-screens(1025px) {
+        br {
+            display: none;
+        }
+    }
+}

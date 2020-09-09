@@ -1,0 +1,11 @@
+@mixin max-screens($size:767px) {
+    @media (max-width: $size) {
+        @content;
+    }
+}
+
+@mixin min-screens($size:1370px) {
+    @media (min-width: $size) {
+        @content;
+    }
+}
