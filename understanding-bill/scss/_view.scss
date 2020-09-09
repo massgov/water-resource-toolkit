@@ -1,0 +1,314 @@
+body {
+    background: #222;
+}
+
+.wrap {
+    margin: 0 auto;
+    max-width: 1370px;
+    position: relative;
+    .seal {
+        width: 280px;
+        position: absolute;
+        right: 20px;
+        top: 140px;
+        @include min-screens(768px) {
+            right: 5vw;
+            top: 5vw;
+            width: 47%;
+        }
+        @include min-screens {
+            right: 70px;
+            top: 70px;
+            width: 640px;
+        }
+    }
+}
+
+.frameblue {
+    background: $blue;
+}
+
+.gap {
+    padding: 20px;
+    @include min-screens(768px) {
+        padding: 5vw;
+    }
+    @include min-screens {
+        padding: 70px;
+    }
+}
+
+h2 {
+    &.welcome {
+        color: $white;
+        font: 28px $copybold;
+        margin: 0;
+        padding: 20px;
+        text-transform: uppercase;
+        @include min-screens(768px) {
+            font-size: 4.5vw;
+            padding: 5vw;
+        }
+        @include min-screens {
+            font-size: 60px;
+            padding: 70px;
+        }
+    }
+}
+
+.wave {
+    padding: 250px 0 20px 0;
+    position: relative;
+    width: 100%;
+    @include min-screens(768px) {
+        padding-top: 0;
+        padding-bottom: 5vw;
+        width: 40%;
+    }
+    @include min-screens {
+        padding-bottom: 66.67px;
+        width: 500px;
+    }
+    .cta {
+        bottom: 65px;
+        left: 50%;
+        position: absolute;
+        transform: translateX(-50%);
+        @include min-screens(768px) {
+            bottom: 8vw;
+            font-size: 3vw;
+            left: 5vw;
+            transform: none;
+        }
+        @include min-screens {
+            font-size: 40px;
+            bottom: 80px;
+            left: 60px;
+        }
+    }
+}
+
+.ques {
+    margin-bottom: -34px;
+    .qcta {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: $blue;
+        text-decoration: none;
+        height: 100%;
+        font: 24px/1.35 $copybold;
+        padding: 15px;
+        text-transform: uppercase;
+        @include min-screens(768px) {
+            font-size: 2.6vw;
+            padding: 2vw;
+        }
+        @include min-screens {
+            font-size: 36px;
+            padding: 40px 20px;
+        }
+        &.orange {
+            background: $orange;
+            box-shadow: 10px 10px #DA7627;
+            &:hover {
+                background: #DA7627;
+                box-shadow: 10px 10px $orange;
+            }
+        }
+        &.yellow {
+            background: $yellow;
+            box-shadow: 10px 10px #CB912B;
+            &:hover {
+                background: #CB912B;
+                box-shadow: 10px 10px $yellow;
+            }
+        }
+        &.bluish {
+            background: $bluish;
+            box-shadow: 10px 10px #92D1F2;
+            &:hover {
+                background: #92D1F2;
+                box-shadow: 10px 10px $bluish;
+            }
+        }
+        &.redish {
+            background: $redish;
+            box-shadow: 10px 10px #AD3841;
+            color: $white;
+            &:hover {
+                background: #AD3841;
+                box-shadow: 10px 10px $redish;
+            }
+        }
+        &.lightblue {
+            background: $lightblue;
+            box-shadow: 10px 10px #3187A5;
+            color: $white;
+            &:hover {
+                background: #3187A5;
+                box-shadow: 10px 10px $lightblue;
+            }
+        }
+        &.greenish {
+            background: $greenish;
+            box-shadow: 10px 10px #6B933E;
+            color: $white;
+            &:hover {
+                background: #6B933E;
+                box-shadow: 10px 10px $greenish;
+            }
+        }
+    }
+    @include min-screens {
+        margin-left: -25px;
+        margin-right: -25px;
+    }
+    [class*="col-"] {
+        margin-bottom: 30px;
+        @include min-screens {
+            margin-bottom: 55px;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+    }
+}
+
+.cta {
+    align-items: center;
+    background: #EE4036;
+    border-radius: 40px;
+    box-shadow: 5px 5px $red;
+    color: $white;
+    display: inline-flex;
+    font: 28px/1 $copybold;
+    padding: 10px 30px;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: top;
+    @include min-screens(768px) {
+        padding: 15px 50px;
+        font-size: 2.8vw;
+    }
+    @include min-screens {
+        font-size: 40px;
+    }
+    .arrow {
+        width: 0;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-left: 15px solid $white;
+        border-bottom: 10px solid transparent;
+        display: inline-block;
+        margin: 0 0 0 10px;
+    }
+    &:hover {
+        background: $red;
+        box-shadow: 2px 2px #EE4036;
+        color: $white;
+        text-decoration: none;
+    }
+}
+
+.ans {
+    min-height: 760px;
+    .bluish {
+        background: $bluish;
+    }
+    .orange {
+        background: $orange;
+    }
+    .yellow {
+        background: $yellow;
+    }
+    .redish {
+        background: $redish;
+        .copy {
+            h2,
+            p {
+                color: $white;
+            }
+        }
+    }
+    .lightblue {
+        background: $lightblue;
+        .copy {
+            h2,
+            p {
+                color: $white;
+            }
+        }
+    }
+    .greenish {
+        background: $greenish;
+        .copy {
+            h2,
+            p {
+                color: $white;
+            }
+        }
+    }
+    .frameblue {
+        background: $blue;
+        .copy {
+            h2,
+            p {
+                color: $white;
+            }
+        }
+    }
+    .img {
+        text-align: center;
+        .img-meta {
+            padding: 15px 0;
+            width: 85%;
+        }
+    }
+    .copy {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-between;
+        padding: 20px 5px;
+        @include min-screens {
+            padding: 50px 35px;
+        }
+        h2 {
+            color: $blue;
+            font: 26px $copybold;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            @include min-screens(768px) {
+                font-size: 2.5vw;
+            }
+            @include min-screens {
+                font-size: 36px;
+            }
+        }
+        p {
+            color: $blue;
+            font: 24px $copy;
+            margin-bottom: 15px;
+            @include min-screens(768px) {
+                font-size: 2vw;
+            }
+            @include min-screens {
+                font-size: 30px;
+            }
+        }
+        .call {
+            margin-top: 40px;
+            text-align: right;
+            .cta {
+                font-size: 20px;
+                padding: 10px 25px;
+                .arrow {
+                    border-top: 8px solid transparent;
+                    border-left: 12px solid $white;
+                    border-bottom: 8px solid transparent;
+                }
+            }
+        }
+    }
+}
