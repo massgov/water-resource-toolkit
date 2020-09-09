@@ -1,0 +1,84 @@
+$path: '../fonts/';
+@font-face {
+    font-family: 'NeutraTextBook';
+    src: url('#{$path}NeutraTextBook.eot');
+    src: url('#{$path}NeutraTextBook.eot') format('embedded-opentype'),
+    url('#{$path}NeutraTextBook.woff2') format('woff2'),
+    url('#{$path}NeutraTextBook.woff') format('woff'),
+    url('#{$path}NeutraTextBook.ttf') format('truetype'),
+    url('#{$path}NeutraTextBook.svg#NeutraTextBook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NeutraTextBookItalic';
+    src: url('#{$path}NeutraTextBookItalic.eot');
+    src: url('#{$path}NeutraTextBookItalic.eot') format('embedded-opentype'),
+    url('#{$path}NeutraTextBookItalic.woff2') format('woff2'),
+    url('#{$path}NeutraTextBookItalic.woff') format('woff'),
+    url('#{$path}NeutraTextBookItalic.ttf') format('truetype'),
+    url('#{$path}NeutraTextBookItalic.svg#NeutraTextBookItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NeutraTextBold';
+    src: url('#{$path}NeutraTextBold.eot');
+    src: url('#{$path}NeutraTextBold.eot') format('embedded-opentype'),
+    url('#{$path}NeutraTextBold.woff2') format('woff2'),
+    url('#{$path}NeutraTextBold.woff') format('woff'),
+    url('#{$path}NeutraTextBold.ttf') format('truetype'),
+    url('#{$path}NeutraTextBold.svg#NeutraTextBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NeutraTextBoldItalic';
+    src: url('#{$path}NeutraTextBoldItalic.eot');
+    src: url('#{$path}NeutraTextBoldItalic.eot') format('embedded-opentype'),
+    url('#{$path}NeutraTextBoldItalic.woff2') format('woff2'),
+    url('#{$path}NeutraTextBoldItalic.woff') format('woff'),
+    url('#{$path}NeutraTextBoldItalic.ttf') format('truetype'),
+    url('#{$path}NeutraTextBoldItalic.svg#NeutraTextBoldItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GothamCondBook';
+    src: url('#{$path}GothamCondBook.eot');
+    src: url('#{$path}GothamCondBook.eot') format('embedded-opentype'),
+    url('#{$path}GothamCondBook.woff2') format('woff2'),
+    url('#{$path}GothamCondBook.woff') format('woff'),
+    url('#{$path}GothamCondBook.ttf') format('truetype'),
+    url('#{$path}GothamCondBook.svg#GothamCondBook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GothamCondMedium';
+    src: url('#{$path}GothamCondMedium.eot');
+    src: url('#{$path}GothamCondMedium.eot') format('embedded-opentype'),
+    url('#{$path}GothamCondMedium.woff2') format('woff2'),
+    url('#{$path}GothamCondMedium.woff') format('woff'),
+    url('#{$path}GothamCondMedium.ttf') format('truetype'),
+    url('#{$path}GothamCondMedium.svg#GothamCondMedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GothamCondBold';
+    src: url('#{$path}GothamCondBold.eot');
+    src: url('#{$path}GothamCondBold.eot') format('embedded-opentype'),
+    url('#{$path}GothamCondBold.woff2') format('woff2'),
+    url('#{$path}GothamCondBold.woff') format('woff'),
+    url('#{$path}GothamCondBold.ttf') format('truetype'),
+    url('#{$path}GothamCondBold.svg#GothamCondBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
