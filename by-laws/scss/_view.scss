@@ -1,0 +1,304 @@
+body {
+    background: #222;
+}
+
+.wrap {
+    background: #fff;
+    margin: 0 auto;
+    // max-width: 1370px;
+    position: relative;
+    width: 1370px;
+    @include min-screens(992px) {
+        min-height: 890px;
+    }
+    .stamp {
+        background: rgba($cyan, 0.4);
+        padding: 20px;
+        text-align: center;
+        @include min-screens(768px) {
+            background: none;
+            padding: 0;
+            position: absolute;
+            right: 0;
+            text-align: left;
+            top: 60px;
+            width: 36%;
+            z-index: 1;
+        }
+        @include min-screens {
+            top: 30px;
+            width: 320px;
+        }
+        .seal {
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            width: 200px;
+            @include min-screens(768px) {
+                width: 85%;
+                display: block;
+            }
+            @include min-screens {
+                width: 295px;
+            }
+        }
+        .wave {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 40%;
+            @include min-screens(768px) {
+                top: 80px;
+                width: 65%;
+            }
+            @include min-screens {
+                top: 110px;
+                width: 77%;
+            }
+        }
+    }
+}
+
+.gap {
+    padding: 20px;
+    @include min-screens(768px) {
+        padding: 5vw;
+    }
+    @include min-screens {
+        padding: 50px;
+    }
+    &.bottom {
+        padding-bottom: 20px;
+    }
+}
+
+.top {
+    @include min-screens(768px) {
+        padding-bottom: 4vw;
+        padding-top: 10vw;
+    }
+    @include min-screens {
+        padding-bottom: 40px;
+        padding-top: 40px;
+    }
+    h2 {
+        color: $white;
+        font: 32px $copy;
+        margin: 0;
+        position: relative;
+        text-align: center;
+        text-transform: uppercase;
+        z-index: 1;
+        @include min-screens(430px) {
+            font-size: 42px;
+        }
+        @include min-screens(768px) {
+            text-align: left;
+            font-size: 7.5vw;
+        }
+        @include min-screens {
+            font-size: 55px;
+        }
+        strong {
+            font-family: $copybold;
+        }
+        @include max-screens {
+            br {
+                display: none;
+            }
+        }
+    }
+    h3 {
+        color: $black;
+        font: 32px $copy;
+        margin: 10px 0 0 0;
+    }
+    &.cyan {
+        background: $cyan;
+    }
+    &.first {
+        // padding-top: 90px;
+        h2 {
+            font-size: 72px;
+        }
+    }
+}
+
+.bottom {
+    background: $white;
+    position: relative;
+    h3 {
+        font: 18px $copy;
+        margin: 0;
+        @include min-screens(430px) {
+            font-size: 24px;
+        }
+        @include min-screens(768px) {
+            font-size: 3.4vw;
+        }
+        @include min-screens {
+            font-size: 44px;
+        }
+    }
+    .list-by-law {
+        ul {
+            list-style: none;
+            margin-top: 0;
+            margin-bottom: 0;
+            padding: 0;
+            li {
+                margin-bottom: 30px;
+                a {
+                    height: 100%;
+                    text-decoration: none;
+                    outline: 0 none;
+                    .glass {
+                        background: #fff;
+                        border: 2px solid transparent;
+                        border-right: 0 none;
+                        flex: 0 0 130px;
+                        height: 100%;
+                        padding: 20px 35px;
+                        width: 130px;
+                        img {
+                            width: 60px;
+                        }
+                    }
+                    .text {
+                        color: #fff;
+                        font: 40px/1.1 NeutraTextBold;
+                        height: 100%;
+                        padding: 20px;
+                    }
+                    &.blue {
+                        .glass {
+                            border-color: #01699c;
+                        }
+                        .text {
+                            background: #01699c;
+                        }
+                    }
+                    &.green {
+                        .glass {
+                            border-color: #7ea740;
+                        }
+                        .text {
+                            background: #7ea740;
+                        }
+                    }
+                    &.orange {
+                        .glass {
+                            border-color: #f99e45;
+                        }
+                        .text {
+                            background: #f99e45;
+                        }
+                    }
+                    &.yellow {
+                        .glass {
+                            border-color: #ffce49;
+                        }
+                        .text {
+                            background: #ffce49;
+                        }
+                    }
+                    &.cyan {
+                        .glass {
+                            border-color: #53b0c7;
+                        }
+                        .text {
+                            background: #53b0c7;
+                        }
+                    }
+                    &.darkblue {
+                        .glass {
+                            border-color: #00689a;
+                        }
+                        .text {
+                            background: #00689a;
+                        }
+                    }
+                }
+            }
+            &:last-child {
+                li {
+                    margin-bottom: 0;
+                }
+            }
+            &:first-child {
+                padding-right: 250px;
+            }
+            &:nth-child(2) {
+                padding-right: 110px;
+            }
+        }
+        .row {
+            margin-left: -7px;
+            margin-right: -7px;
+            [class*="col-"] {
+                padding-left: 7px;
+                padding-right: 7px;
+            }
+        }
+    }
+    &.map-bylaw {
+        padding-top: 0;
+    }
+}
+
+.map-area {
+    position: relative;
+    .map-place {
+        left: 0;
+        padding-left: 35px;
+        position: absolute;
+        top: 0;
+        width: 88%;
+        img {
+            width: 100%;
+        }
+    }
+    .map-svg {
+        .point {
+            display: none;
+            cursor: pointer;
+        }
+    }
+}
+
+.loc-list {
+    position: relative;
+    width: 57%;
+    z-index: 5;
+    h2 {
+        display: flex;
+        align-items: center;
+        font: 24px/1.1 NeutraTextBold;
+        margin: 0 0 15px;
+        color: #3386ad;
+        .icon {
+            width: 20px;
+            flex: 0 0 20px;
+            margin-right: 15px;
+        }
+    }
+    .cities-name {
+        padding: 0 0 0 35px;
+        .loc-list {
+            max-width: 60%;
+        }
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            li {
+                font: 20px/1 "NeutraTextBook", Sans;
+                margin-bottom: 5px;
+                a {
+                    color: #666;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
