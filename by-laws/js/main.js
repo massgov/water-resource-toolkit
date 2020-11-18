@@ -59,7 +59,7 @@ function cityClick() {
             if (point.includes(i)) {
                 console.log(tools[i]);
                 window.open(tools[i], "_blank")
-                // window.location = tools[i];
+                    // window.location = tools[i];
             }
         }
     });
