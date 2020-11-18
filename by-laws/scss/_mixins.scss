@@ -4,7 +4,7 @@
     }
 }
 
-@mixin min-screens($size:1370px) {
+@mixin min-screens($size:1215px) {
     @media (min-width: $size) {
         @content;
     }

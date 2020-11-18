@@ -7,119 +7,76 @@ body {
     margin: 0 auto;
     // max-width: 1370px;
     position: relative;
-    width: 1370px;
+    width: 1214px;
+    @include min-screens {
+        width: 1370px;
+    }
     @include min-screens(992px) {
         min-height: 890px;
     }
     .stamp {
-        background: rgba($cyan, 0.4);
-        padding: 20px;
-        text-align: center;
-        @include min-screens(768px) {
-            background: none;
-            padding: 0;
-            position: absolute;
-            right: 0;
-            text-align: left;
-            top: 60px;
-            width: 36%;
-            z-index: 1;
-        }
-        @include min-screens {
-            top: 30px;
-            width: 320px;
-        }
+        background: none;
+        padding: 0;
+        position: absolute;
+        right: 0;
+        top: 30px;
+        width: 36%;
+        z-index: 1;
+        width: 320px;
         .seal {
             display: inline-block;
             position: relative;
             z-index: 1;
-            width: 200px;
-            @include min-screens(768px) {
-                width: 85%;
-                display: block;
-            }
-            @include min-screens {
-                width: 295px;
-            }
+            width: 295px;
         }
         .wave {
             position: absolute;
             right: 0;
-            top: 0;
-            width: 40%;
-            @include min-screens(768px) {
-                top: 80px;
-                width: 65%;
-            }
-            @include min-screens {
-                top: 110px;
-                width: 77%;
-            }
+            top: 110px;
+            width: 77%;
         }
     }
 }
 
 .gap {
-    padding: 20px;
-    @include min-screens(768px) {
-        padding: 5vw;
-    }
-    @include min-screens {
-        padding: 50px;
-    }
+    padding: 40px;
     &.bottom {
         padding-bottom: 20px;
     }
 }
 
 .top {
-    @include min-screens(768px) {
-        padding-bottom: 4vw;
-        padding-top: 10vw;
-    }
-    @include min-screens {
-        padding-bottom: 40px;
-        padding-top: 40px;
-    }
     h2 {
         color: $white;
-        font: 32px $copy;
+        font: 46px $copy;
         margin: 0;
         position: relative;
-        text-align: center;
         text-transform: uppercase;
         z-index: 1;
-        @include min-screens(430px) {
-            font-size: 42px;
-        }
-        @include min-screens(768px) {
-            text-align: left;
-            font-size: 7.5vw;
-        }
         @include min-screens {
             font-size: 55px;
         }
         strong {
             font-family: $copybold;
         }
-        @include max-screens {
-            br {
-                display: none;
-            }
-        }
     }
     h3 {
         color: $black;
-        font: 32px $copy;
+        font: 28px $copy;
         margin: 10px 0 0 0;
+        @include min-screens {
+            font-size: 32px;
+        }
     }
     &.cyan {
         background: $cyan;
     }
     &.first {
-        // padding-top: 90px;
         h2 {
-            font-size: 72px;
+            font-size: 60px;
+            @include min-screens {
+                font-size: 72px;
+            }
         }
     }
 }
@@ -128,14 +85,8 @@ body {
     background: $white;
     position: relative;
     h3 {
-        font: 18px $copy;
+        font: 40px $copy;
         margin: 0;
-        @include min-screens(430px) {
-            font-size: 24px;
-        }
-        @include min-screens(768px) {
-            font-size: 3.4vw;
-        }
         @include min-screens {
             font-size: 44px;
         }
@@ -156,19 +107,30 @@ body {
                         background: #fff;
                         border: 2px solid transparent;
                         border-right: 0 none;
-                        flex: 0 0 130px;
+                        flex: 0 0 100px;
                         height: 100%;
-                        padding: 20px 35px;
-                        width: 130px;
+                        padding: 15px 25px;
+                        width: 100px;
+                        @include min-screens {
+                            flex: 0 0 130px;
+                            padding: 20px 35px;
+                            width: 130px;
+                        }
                         img {
-                            width: 60px;
+                            width: 50px;
+                            @include min-screens {
+                                width: 60px;
+                            }
                         }
                     }
                     .text {
                         color: #fff;
-                        font: 40px/1.1 NeutraTextBold;
+                        font: 32px/1.1 NeutraTextBold;
                         height: 100%;
                         padding: 20px;
+                        @include min-screens {
+                            font-size: 40px;
+                        }
                     }
                     &.blue {
                         .glass {
@@ -292,8 +254,11 @@ body {
             margin: 0;
             padding: 0;
             li {
-                font: 20px/1 "NeutraTextBook", Sans;
+                font: 18px/1 "NeutraTextBook", Sans;
                 margin-bottom: 5px;
+                @include min-screens {
+                    font-size: 20px;
+                }
                 a {
                     color: #666;
                     text-decoration: none;
