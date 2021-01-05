@@ -1,0 +1,10 @@
+h1>Massachusetts Drought Dashboard</h1>
+<ul>
+  <li><a href="http://nedews.nrcc.cornell.edu/ma/pcpnregion">Precipitation Summary</a></li>
+  <li><a href="http://nedews.nrcc.cornell.edu/ma/sfregion">Streamflow Summary</a></li>
+  <li><a href="http://nedews.nrcc.cornell.edu/ma/gwregion">Groundwater Summary</a></li>
+  <li><a href="http://nedews.nrcc.cornell.edu/ma/pcpnstation">Precipitation Station Table</a></li>
+  <li><a href="http://nedews.nrcc.cornell.edu/ma/sfstation">Streamflow Gauge Table</a></li>
+  <li><a href="http://nedews.nrcc.cornell.edu/ma/gwstation">Groundwater Well Table</a></li>
+</ul>
+<p>Use the browser "Back" button to return to this menu from products.</p>
